@@ -9,3 +9,7 @@ function getSub(num1, num2) {
 function getMul(num1, num2) {
     return num1*num2;
 }
+
+function getDiv(num1, num2) {
+    return num1/num2;
+}
