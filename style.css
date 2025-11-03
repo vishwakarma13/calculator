@@ -1,0 +1,18 @@
+div {
+    outline: 2px solid red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 60%;
+    height: 50vh;
+}
+
+#keys-container {
+    display: flex;
+    flex-wrap: wrap;
+}
