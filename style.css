@@ -25,6 +25,7 @@ body {
 .key-buttons {
     height: 15%;
     width: 15%;
+    margin: 2%;
 }
 
 #display {
