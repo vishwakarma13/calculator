@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40%;
+    width: 30%;
     height: 90vh;
 }
 
@@ -20,11 +20,12 @@ body {
     flex-wrap: wrap;
     height: 80%;
     justify-content: center;
+    align-items: center;
 }
 
 .key-buttons {
     height: 15%;
-    width: 15%;
+    width: 20%;
     margin: 2%;
     display: flex;
     justify-content: center;
@@ -39,7 +40,7 @@ body {
 }
 
 #result {
-    height: 15%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
