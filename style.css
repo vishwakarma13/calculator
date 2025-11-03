@@ -1,5 +1,5 @@
 div {
-    outline: 1px solid red;
+    border: 1px solid red;
 }
 
 body {
@@ -26,6 +26,9 @@ body {
     height: 15%;
     width: 15%;
     margin: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #display {
