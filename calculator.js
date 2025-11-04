@@ -95,3 +95,8 @@ let subtractkey = document.querySelector("#subtractkey");
 subtractkey.addEventListener("click", ()=> {
     leftoperand = displaypara.textContent;
 });
+
+let dividekey = document.querySelector("#dividekey");
+dividekey.addEventListener("click", ()=> {
+    leftoperand = displaypara.textContent;
+})
