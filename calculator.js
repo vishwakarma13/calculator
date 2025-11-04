@@ -100,3 +100,8 @@ let dividekey = document.querySelector("#dividekey");
 dividekey.addEventListener("click", ()=> {
     leftoperand = displaypara.textContent;
 })
+
+let multiplykey = document.querySelector("#multiplykey");
+multiplykey.addEventListener("click", ()=> {
+    leftoperand = displaypara.textContent;
+})
