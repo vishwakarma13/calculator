@@ -28,3 +28,12 @@ function operate (input1, input2, operator){
         return getDiv(input1, input2);    
     }
 }
+let display = document.querySelector("#display"); //display is selected universally 
+
+//button click events for key1
+let numonekey = document.querySelector("#numonekey");
+numonekey.addEventListener("click", ()=> display.textContent = 1);
+
+//button click events key2
+let numtwokey = document.querySelector("#numtwokey");
+numtwokey.addEventListener("click", ()=> display.textContent = 2);
