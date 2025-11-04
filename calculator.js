@@ -79,3 +79,6 @@ doublezerokey.addEventListener("click", ()=> displaypara.textContent += "00");
 let deldigitkey = document.querySelector("#deldigitkey");
 deldigitkey.addEventListener("click", ()=> displaypara.textContent = "");//deletes one part of the calculation
 
+//button click event for decimal key
+let decimalkey = document.querySelector("#decimalkey");
+decimalkey.addEventListener("click", ()=> displaypara.textContent += ".");
