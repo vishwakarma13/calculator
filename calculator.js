@@ -69,3 +69,7 @@ numninekey.addEventListener("click", ()=> display.textContent = 9);
 //button click events for key0
 let numzerokey = document.querySelector("#numzerokey");
 numzerokey.addEventListener("click", ()=> display.textContent = 0);
+
+//button click events for key5
+let doublezerokey = document.querySelector("#double-zerokey");
+doublezerokey.addEventListener("click", ()=> display.textContent = "00");
