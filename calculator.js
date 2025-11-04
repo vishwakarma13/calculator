@@ -82,3 +82,11 @@ deldigitkey.addEventListener("click", ()=> displaypara.textContent = "");//delet
 //button click event for decimal key
 let decimalkey = document.querySelector("#decimalkey");
 decimalkey.addEventListener("click", ()=> displaypara.textContent += ".");
+
+let leftoperand = "" //declared in global scope
+
+//operator click event listeners and further actions
+let addkey = document.querySelector("#addkey");
+ addkey.addEventListener("click", ()=> {
+    leftoperand = displaypara.textContent;
+});
