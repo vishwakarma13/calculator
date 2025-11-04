@@ -105,3 +105,8 @@ let multiplykey = document.querySelector("#multiplykey");
 multiplykey.addEventListener("click", ()=> {
     leftoperand = displaypara.textContent;
 })
+
+let percentkey = document.querySelector("#percentkey");
+percentkey.addEventListener("click", ()=> {
+    leftoperand = displaypara.textContent;
+})
