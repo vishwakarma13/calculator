@@ -28,48 +28,49 @@ function operate (input1, input2, operator){
         return getDiv(input1, input2);    
     }
 }
-let display = document.querySelector("#display"); //display is selected universally 
+let display = document.querySelector("#display"); //display is selected universally
+let displaypara = document.querySelector("#displaypara");
 
 //button click events for key1
 let numonekey = document.querySelector("#numonekey");
-numonekey.addEventListener("click", ()=> display.textContent = 1);
+numonekey.addEventListener("click", ()=> displaypara.textContent += 1);
 
 //button click events for key2
 let numtwokey = document.querySelector("#numtwokey");
-numtwokey.addEventListener("click", ()=> display.textContent = 2);
+numtwokey.addEventListener("click", ()=> displaypara.textContent += 2);
 
 //button click events for key3
 let numthreekey = document.querySelector("#numthreekey");
-numthreekey.addEventListener("click", ()=> display.textContent = 3);
+numthreekey.addEventListener("click", ()=> displaypara.textContent += 3);
 
 //button click events for key4
 let numfourkey = document.querySelector("#numfourkey");
-numfourkey.addEventListener("click", ()=> display.textContent = 4);
+numfourkey.addEventListener("click", ()=> displaypara.textContent += 4);
 
 //button click events for key5
 let numfivekey = document.querySelector("#numfivekey");
-numfivekey.addEventListener("click", ()=> display.textContent = 5);
+numfivekey.addEventListener("click", ()=> displaypara.textContent += 5);
 
 //button click events for key6
 let numsixkey = document.querySelector("#numsixkey");
-numsixkey.addEventListener("click", ()=> display.textContent = 6);
+numsixkey.addEventListener("click", ()=> displaypara.textContent += 6);
 
 //button click events for key7
 let numsevenkey = document.querySelector("#numsevenkey");
-numsevenkey.addEventListener("click", ()=> display.textContent = 7);
+numsevenkey.addEventListener("click", ()=> displaypara.textContent += 7);
 
 //button click events for key8
 let numeightkey = document.querySelector("#numeightkey");
-numeightkey.addEventListener("click", ()=> display.textContent = 8);
+numeightkey.addEventListener("click", ()=> displaypara.textContent += 8);
 
 //button click events for key9
 let numninekey = document.querySelector("#numninekey");
-numninekey.addEventListener("click", ()=> display.textContent = 9);
+numninekey.addEventListener("click", ()=> displaypara.textContent += 9);
 
 //button click events for key0
 let numzerokey = document.querySelector("#numzerokey");
-numzerokey.addEventListener("click", ()=> display.textContent = 0);
+numzerokey.addEventListener("click", ()=> displaypara.textContent += 0);
 
-//button click events for key5
+//button click events for key00
 let doublezerokey = document.querySelector("#double-zerokey");
-doublezerokey.addEventListener("click", ()=> display.textContent = "00");
+doublezerokey.addEventListener("click", ()=> displaypara.textContent += "00");
