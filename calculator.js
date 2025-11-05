@@ -56,6 +56,8 @@ function appendNumber (number) {
     else {displaypara.textContent +=number;}}
 
 let leftoperand = "" //declared in global scope
+let rightoperand = "";
+let finalresult = "";
 let operator = null;
 let shouldResetDisplay = false;
 
@@ -91,6 +93,16 @@ function handleOperator(op) {
         let deldigitkey = document.querySelector("#deldigitkey");
         deldigitkey.addEventListener("click", ()=> displaypara.textContent = "");//deletes one operand of the calculation for entering it again
 
+        let allclearkey = document.querySelector("#allclearkey");
+        allclearkey.addEventListener("click", ()=> {
+            leftoperand = "";
+            rightoperand = "";
+            finalresult = "";
+            operator = null;
+            shouldResetDisplay = false;
+            displaypara.textContent = "";
+        });
+
 
 //result calculation on pressing the = button
 
@@ -99,8 +111,8 @@ equalkey.addEventListener("click", ()=> {
 
     if (operator === null) return;
 
-    let rightoperand = displaypara.textContent;
-    let finalresult = operate(parseFloat(leftoperand), parseFloat(rightoperand), operator);
+    rightoperand = displaypara.textContent;
+    finalresult = operate(parseFloat(leftoperand), parseFloat(rightoperand), operator);
     displaypara.textContent = finalresult;
 
     leftoperand = "";
