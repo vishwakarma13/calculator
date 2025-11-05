@@ -9,75 +9,54 @@ function operate (input1, input2, operator){
     if (operator === "*"){return getMul(input1, input2);}
     if (operator === "/"){return getDiv(input1, input2);}
 }
-let displaypara = document.querySelector("#displaypara");
+let displaypara = document.querySelector("#displaypara"); //displaypara is selected globally
 
-//button click events for key1
 let numonekey = document.querySelector("#numonekey");
 numonekey.addEventListener("click", ()=> appendNumber("1"));
 
-//button click events for key2
 let numtwokey = document.querySelector("#numtwokey");
 numtwokey.addEventListener("click", ()=> appendNumber("2"));
 
-//button click events for key3
 let numthreekey = document.querySelector("#numthreekey");
 numthreekey.addEventListener("click", ()=> appendNumber("3"));
 
-//button click events for key4
 let numfourkey = document.querySelector("#numfourkey");
 numfourkey.addEventListener("click", ()=> appendNumber("4"));
 
-//button click events for key5
 let numfivekey = document.querySelector("#numfivekey");
 numfivekey.addEventListener("click", ()=> appendNumber("5"));
 
-//button click events for key6
 let numsixkey = document.querySelector("#numsixkey");
 numsixkey.addEventListener("click", ()=> appendNumber("6"));
 
-//button click events for key7
 let numsevenkey = document.querySelector("#numsevenkey");
 numsevenkey.addEventListener("click", ()=> appendNumber("7"));
 
-//button click events for key8
 let numeightkey = document.querySelector("#numeightkey");
 numeightkey.addEventListener("click", ()=> appendNumber("8"));
 
-//button click events for key9
 let numninekey = document.querySelector("#numninekey");
 numninekey.addEventListener("click", ()=> appendNumber("9"));
 
-//button click events for key0
 let numzerokey = document.querySelector("#numzerokey");
 numzerokey.addEventListener("click", ()=> appendNumber("0"));
 
-//button click events for key00
 let doublezerokey = document.querySelector("#double-zerokey");
 doublezerokey.addEventListener("click", ()=> appendNumber("00"));
 
-//button click event for key del
 let deldigitkey = document.querySelector("#deldigitkey");
-deldigitkey.addEventListener("click", ()=> appendNumber(""));//deletes one part of the calculation
+deldigitkey.addEventListener("click", ()=> appendNumber(""));//deletes one operand of the calculation 
 
-//button click event for decimal key
 let decimalkey = document.querySelector("#decimalkey");
 decimalkey.addEventListener("click", ()=> appendNumber("."));
-
-
 
 function appendNumber (number) {
     if (shouldResetDisplay) {
         displaypara.textContent = "";
-        shouldResetDisplay = false;
-    }
-    if (displaypara.textContent === "0" && number !== ".") {
-        displaypara.textContent = number;
-    }
-    else {
-        displaypara.textContent +=number;
-    }
-}
+        shouldResetDisplay = false;}
 
+    if (displaypara.textContent === "0" && number !== ".") {displaypara.textContent = number;}
+    else {displaypara.textContent +=number;}}
 
 let leftoperand = "" //declared in global scope
 let operator = null;
@@ -87,21 +66,16 @@ function handleOperator(op) {
     if (leftoperand === "") {
         leftoperand = displaypara.textContent;
         operator = op;
-        shouldResetDisplay = true; //flag was set to clear the display on next key press
-    }
+        shouldResetDisplay = true;}
 
-    else{// if the leftoperand isn't empty already
+    else {// if the leftoperand isn't empty already
         let result = operate (parseFloat(leftoperand), parseFloat(displaypara.textContent), operator);
         displaypara.textContent = result;
         leftoperand = result;
         operator = op;
-        shouldResetDisplay = true;
-    }
-}
+        shouldResetDisplay = true;}}
+
 //operator click event listeners and further actions
-
-
-
         let addkey = document.querySelector("#addkey");
         addkey.addEventListener("click", ()=> handleOperator("+"));
  
@@ -116,3 +90,20 @@ function handleOperator(op) {
 
         let percentkey = document.querySelector("#percentkey");
         percentkey.addEventListener("click", ()=> handleOperator("%"));
+
+
+//result calculation on pressing the = button
+
+let equalkey = document.querySelector("#equalkey");
+equalkey.addEventListener("click", ()=> {
+
+    if (operator === null) return;
+
+    let rightoperand = displaypara.textContent;
+    let finalresult = operate(parseFloat(leftoperand), parseFloat(rightoperand), operator);
+    displaypara.textContent = finalresult;
+
+    leftoperand = "";
+    operator = null;
+    shouldResetDisplay = true;
+})
