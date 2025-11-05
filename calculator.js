@@ -85,6 +85,19 @@ decimalkey.addEventListener("click", ()=> displaypara.textContent += ".");
 
 
 
+function appendNumber (number) {
+    if (shouldResetDisplay) {
+        displaypara.textContent = "";
+        shouldResetDisplay = false;
+    }
+    if (displaypara.textContent === "0" && number !== ".") {
+        displaypara.textContent = number;
+    }
+    else {
+        displaypara.textContent +=number;
+    }
+}
+
 
 let leftoperand = "" //declared in global scope
 let operator = null;
