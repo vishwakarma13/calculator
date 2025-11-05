@@ -46,6 +46,6 @@ body {
     align-items: center;
 }
 
-#displaypara {
+.key-buttons, #displaypara {
     font-size: 300%;
 }
