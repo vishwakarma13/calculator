@@ -42,10 +42,7 @@ let numzerokey = document.querySelector("#numzerokey");
 numzerokey.addEventListener("click", ()=> appendNumber("0"));
 
 let doublezerokey = document.querySelector("#double-zerokey");
-doublezerokey.addEventListener("click", ()=> appendNumber("00"));
-
-let deldigitkey = document.querySelector("#deldigitkey");
-deldigitkey.addEventListener("click", ()=> appendNumber(""));//deletes one operand of the calculation 
+doublezerokey.addEventListener("click", ()=> appendNumber("00")); 
 
 let decimalkey = document.querySelector("#decimalkey");
 decimalkey.addEventListener("click", ()=> appendNumber("."));
@@ -90,6 +87,9 @@ function handleOperator(op) {
 
         let percentkey = document.querySelector("#percentkey");
         percentkey.addEventListener("click", ()=> handleOperator("%"));
+
+        let deldigitkey = document.querySelector("#deldigitkey");
+        deldigitkey.addEventListener("click", ()=> displaypara.textContent = "");//deletes one operand of the calculation for entering it again
 
 
 //result calculation on pressing the = button
