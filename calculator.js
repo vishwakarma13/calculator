@@ -83,30 +83,43 @@ deldigitkey.addEventListener("click", ()=> displaypara.textContent = "");//delet
 let decimalkey = document.querySelector("#decimalkey");
 decimalkey.addEventListener("click", ()=> displaypara.textContent += ".");
 
+
+
+
 let leftoperand = "" //declared in global scope
+let operator = null;
+let shouldResetDisplay = false;
 
+function handleOperator(op) {
+    if (leftoperand === "") {
+        leftoperand = displaypara.textContent;
+        operator = op;
+        shouldResetDisplay = true; //flag was set to clear the display on next key press
+    }
+
+    else{// if the leftoperand isn't empty already
+        let result = operate (parseFloat(leftoperand), parseFloat(displaypara.textContent), operator);
+        displaypara.textContent = result;
+        leftoperand = result;
+        operator = op;
+        shouldResetDisplay = true;
+    }
+}
 //operator click event listeners and further actions
-let addkey = document.querySelector("#addkey");
- addkey.addEventListener("click", ()=> {
-    leftoperand = displaypara.textContent;
-});
 
-let subtractkey = document.querySelector("#subtractkey");
-subtractkey.addEventListener("click", ()=> {
-    leftoperand = displaypara.textContent;
-});
 
-let dividekey = document.querySelector("#dividekey");
-dividekey.addEventListener("click", ()=> {
-    leftoperand = displaypara.textContent;
-})
 
-let multiplykey = document.querySelector("#multiplykey");
-multiplykey.addEventListener("click", ()=> {
-    leftoperand = displaypara.textContent;
-})
+        let addkey = document.querySelector("#addkey");
+        addkey.addEventListener("click", ()=> handleOperator("+"));
+ 
+        let subtractkey = document.querySelector("#subtractkey");
+        subtractkey.addEventListener("click", ()=> handleOperator("-"));
 
-let percentkey = document.querySelector("#percentkey");
-percentkey.addEventListener("click", ()=> {
-    leftoperand = displaypara.textContent;
-})
+        let dividekey = document.querySelector("#dividekey");
+        dividekey.addEventListener("click", ()=> handleOperator("/"));
+
+        let multiplykey = document.querySelector("#multiplykey");
+        multiplykey.addEventListener("click", ()=> handleOperator("*"));
+
+        let percentkey = document.querySelector("#percentkey");
+        percentkey.addEventListener("click", ()=> handleOperator("%"));
