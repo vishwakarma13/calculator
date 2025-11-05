@@ -33,55 +33,55 @@ let displaypara = document.querySelector("#displaypara");
 
 //button click events for key1
 let numonekey = document.querySelector("#numonekey");
-numonekey.addEventListener("click", ()=> displaypara.textContent += 1);
+numonekey.addEventListener("click", ()=> appendNumber("1"));
 
 //button click events for key2
 let numtwokey = document.querySelector("#numtwokey");
-numtwokey.addEventListener("click", ()=> displaypara.textContent += 2);
+numtwokey.addEventListener("click", ()=> appendNumber("2"));
 
 //button click events for key3
 let numthreekey = document.querySelector("#numthreekey");
-numthreekey.addEventListener("click", ()=> displaypara.textContent += 3);
+numthreekey.addEventListener("click", ()=> appendNumber("3"));
 
 //button click events for key4
 let numfourkey = document.querySelector("#numfourkey");
-numfourkey.addEventListener("click", ()=> displaypara.textContent += 4);
+numfourkey.addEventListener("click", ()=> appendNumber("4"));
 
 //button click events for key5
 let numfivekey = document.querySelector("#numfivekey");
-numfivekey.addEventListener("click", ()=> displaypara.textContent += 5);
+numfivekey.addEventListener("click", ()=> appendNumber("5"));
 
 //button click events for key6
 let numsixkey = document.querySelector("#numsixkey");
-numsixkey.addEventListener("click", ()=> displaypara.textContent += 6);
+numsixkey.addEventListener("click", ()=> appendNumber("6"));
 
 //button click events for key7
 let numsevenkey = document.querySelector("#numsevenkey");
-numsevenkey.addEventListener("click", ()=> displaypara.textContent += 7);
+numsevenkey.addEventListener("click", ()=> appendNumber("7"));
 
 //button click events for key8
 let numeightkey = document.querySelector("#numeightkey");
-numeightkey.addEventListener("click", ()=> displaypara.textContent += 8);
+numeightkey.addEventListener("click", ()=> appendNumber("8"));
 
 //button click events for key9
 let numninekey = document.querySelector("#numninekey");
-numninekey.addEventListener("click", ()=> displaypara.textContent += 9);
+numninekey.addEventListener("click", ()=> appendNumber("9"));
 
 //button click events for key0
 let numzerokey = document.querySelector("#numzerokey");
-numzerokey.addEventListener("click", ()=> displaypara.textContent += 0);
+numzerokey.addEventListener("click", ()=> appendNumber("0"));
 
 //button click events for key00
 let doublezerokey = document.querySelector("#double-zerokey");
-doublezerokey.addEventListener("click", ()=> displaypara.textContent += "00");
+doublezerokey.addEventListener("click", ()=> appendNumber("00"));
 
 //button click event for key del
 let deldigitkey = document.querySelector("#deldigitkey");
-deldigitkey.addEventListener("click", ()=> displaypara.textContent = "");//deletes one part of the calculation
+deldigitkey.addEventListener("click", ()=> appendNumber(""));//deletes one part of the calculation
 
 //button click event for decimal key
 let decimalkey = document.querySelector("#decimalkey");
-decimalkey.addEventListener("click", ()=> displaypara.textContent += ".");
+decimalkey.addEventListener("click", ()=> appendNumber("."));
 
 
 
