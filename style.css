@@ -1,5 +1,5 @@
-div {
-    border: 1px solid red;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -7,13 +7,29 @@ body {
     justify-content: center;
 }
 
-#container {
+.containing, .key-buttons {
+    border-radius: 10px;
+    /* border: 2px solid red; */
+}
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 60%; /* 30*/
-    height: 100vh; /* 90VH*/
+    width: 60%;
+    height: 100vh;
 }
+
+#display {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslategray;
+    font-size: 300%;
+    color: white;
+}
+
 
 #keys-container {
     display: flex;
@@ -21,7 +37,9 @@ body {
     height: 80%;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10%;
 }
+
 
 .key-buttons {
     height: 15%;
@@ -32,20 +50,7 @@ body {
     align-items: center;
 }
 
-#display {
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-#result {
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.key-buttons, #displaypara {
+.key-buttons{
     font-size: 300%;
 }
