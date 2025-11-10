@@ -7,27 +7,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: olive;
 }
 
 #display-container {
     height: 20%;
     width: 80%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* flex-direction: column-reverse; */
+    justify-content: end;
+    align-items: end;
     background-color: darkslategray;
     font-size: 300%;
     color: white;
 }
 
+p {
+    margin: 0;
+    padding: 5%;
+}
 
 #keys-container {
     height: 60%;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -35,9 +40,20 @@
 .key-buttons {
     height: 15%;
     width: 20%;
+    margin: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: coral;
+    background-color: blanchedalmond;
+    color: black;
+    font-size: 300%;
+}
+
+#allclearkey, #addkey, #subtractkey, #dividekey, #multiplykey, #deldigitkey, #percentkey {
+    background-color: orange;
+}
+
+#equalkey {
+    background-color: green;
     color: white;
 }
