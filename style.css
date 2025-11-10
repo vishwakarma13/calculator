@@ -1,26 +1,11 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-.containing, .key-buttons {
-    border-radius: 10px;
-    /* border: 2px solid red; */
-}
-
-.container {
+#main-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 60%;
     height: 100vh;
 }
 
-#display {
+#display-container {
     height: 80px;
     display: flex;
     align-items: center;
@@ -48,9 +33,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.key-buttons{
-    font-size: 300%;
+    background-color: coral;
+    color: white;
 }
