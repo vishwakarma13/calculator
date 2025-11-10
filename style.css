@@ -1,3 +1,8 @@
+* {
+    border-radius: 40px;
+}
+
+
 #main-container {
     height: 95vh;
     width: 70vw;
@@ -5,9 +10,10 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: olive;
+    background-color: black;
+    touch-action: manipulation;
 }
 
 #display-container {
@@ -19,7 +25,9 @@
     align-items: end;
     background-color: darkslategray;
     font-size: 300%;
-    color: white;
+    color: black;
+    background-color: white;
+
 }
 
 p {
@@ -33,7 +41,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 
 
