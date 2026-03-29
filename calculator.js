@@ -68,6 +68,7 @@ function handleOperator(op) {
         shouldResetDisplay = true;}
 
     else {
+        
         // if the leftoperand isn't empty already
         let result = operate (parseFloat(leftoperand), parseFloat(displaypara.textContent), operator);
         displaypara.textContent = result;
